@@ -9,13 +9,13 @@ router.get('/', function(req, res, next) {
   res.json(users);
 });
 //Create a new user {"user":#,"name":"something"}
-router.post('/', function(req, res, next) {
+router.post('/user', function(req, res, next) {
   users.push(req.body);
   res.json(req.body);
 });
 
 //Update an existing user {"user":#,"name":"something"}
-router.put('/', function(req, res, next) {
+router.put('/user', function(req, res, next) {
   var user = users.filter(function(user){ return user.user==req.body.user}).pop();//find the user
   if(user!= null && user!= undefined){
     console.log("user recovered is:",user);
@@ -25,6 +25,8 @@ router.put('/', function(req, res, next) {
     res.status(404);
     res.json("User to update not found");
   }
+
+
   
 });
 
