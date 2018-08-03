@@ -1,0 +1,19 @@
+{
+    "app": {
+      "port": 8080
+    },
+    "database":{
+      "host" : "remote.database.host.com",
+      "user" : "allowedUser",
+      "password" : "123456",
+      "database" : "classicmodels",
+      "connectionLimit" : 30,
+      "debug":false,
+      "timeOut":10000
+    },
+    "logger":{
+      "appenders": { "out": {"type": "stdout","layout": { "type": "basic" }},
+                     "app":{"type":"file","filename":"/log/logFile.log"}},
+      "categories": { "default": {"appenders": ["out","app"] ,  "level": "info" }}
+      }
+  }
