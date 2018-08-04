@@ -1,12 +1,10 @@
  var config={
     'host':'localhost',
-    'port':3306,
+    'port':3307,
     'user':'root',
-    'password':'W4lm4rt',
+    'password':'pass123',
     'database':'classicmodels',
     'dialect':'mysql'
  }
-
- 
 
  module.exports = config;
