@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 //simulation of our resources
-var users = [];
+var users = [{"id":1,"name":"test"}];
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {

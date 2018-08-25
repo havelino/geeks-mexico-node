@@ -1,0 +1,19 @@
+{
+    "app": {
+      "port": 3000
+    },
+    "database":{
+        "host":"localhost",
+        "port":3307,
+        "user":"root",
+        "password":"pass123",
+        "database":"classicmodels",
+        "dialect":"mysql"
+    },
+    "logger":{
+      "appenders": {"console": { "type": "console" } ,
+                    "out": {"type": "stdout","layout": { "type": "basic" }},
+                     "app":{"type":"file","filename":"./log/logFile.log"}},
+      "categories": { "default": {"appenders": ["out","app","console"] ,  "level": "debug" }}
+      }
+  }
