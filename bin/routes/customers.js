@@ -20,4 +20,14 @@ router.get('/customer/:custId', function(req, res, next) {
       err=>res.json(err));
 });
 
+router.post('/',function(req,res,next){
+  service.insertCustomer(req.body)
+  .then(resp=>{
+    res.status(201);
+    res.send(resp)
+  },err=>{
+    res.json(err);
+  })
+});
+
 module.exports = router;
